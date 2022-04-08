@@ -1,0 +1,114 @@
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+#logo img {
+    /*max-height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  test
+  test
+  */
+}
+
+#logo .logo-lg,
+#logo .logo-mini {
+    position: relative;
+    height: 50px;
+}
+
+
+/* this style is for the view of user list view in the admin */
+
+.user-table {
+    width: 100% !important;
+}
+
+.login-box .logo-lg>img {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    body.skin-black #logo,
+    body.skin-black #logo:hover,
+    body.skin-black-light #logo,
+    body.skin-black-light #logo:hover {
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.login-page-header.logo .logo-lg {
+    display: block;
+}
+
+.login-page-header.logo .logo-mini {
+    display: none;
+}
+
+body .label {
+    color: #333;
+    font-size: 80%;
+}
+
+a.tabledrag-handle .handle {
+    width: 24px;
+    height: 24px;
+}
+
+.box>.box-header>h4 {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .content-header>h1.page-title {
+        margin-top: 20px;
+    }
+}
+
+.dialog-off-canvas-main-canvas {
+    position: relative;
+    height: 100%;
+}
+
+.main-header {
+    z-index: 9999 !important;
+}
+
+.nav-tabs-custom table tbody tr td {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 45px;
+    padding-left: 35px;
+}
+
+.nav-tabs-custom table th {
+    padding-left: 35px !important;
+    color: #9FA2B4;
+}
+
+.skin-blue .main-header .logo {
+    margin-top: 5px !important;
+}
+
+#logo img :hover {
+    background-color: #363740 !important;
+}
+
+#logo img {
+    background-color: #363740 !important;
+}
+
+.fontyourface .main-sidebar,
+.left-side {
+    top: 0px !important;
+    z-index: 9;
+}
+
+.skin-blue .main-header .logo:hover {
+    background-color: transparent !important;
+}
