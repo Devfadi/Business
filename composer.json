@@ -17,6 +17,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/bootstrap": "^3.23",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/captcha": "^1.2",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",

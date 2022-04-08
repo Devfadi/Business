@@ -23,9 +23,11 @@ class RegsiterController extends ControllerBase
       ->getFormObject('user', 'register')
       ->setEntity($entity);
     $form = \Drupal::formBuilder()->getForm($formObject);
+    // d_limit($form,3);
+    // exit;
     $form['#theme'] = 'custom_register_form';
     $form['#attached']['library'][] = 'business_workflow/register-steps';
-    
+
     //get icons
     $paragraph_type = \Drupal\paragraphs\Entity\ParagraphsType::load("online_payment_gateway");
     $icon_url = $paragraph_type->getIconUrl();
@@ -38,9 +40,9 @@ class RegsiterController extends ControllerBase
     // $this->step2Alter($form);
     $this->step3Alter($form);
     // $this->step4Alter($form);
-    
-    
-    
+
+
+
     return $form;
 
 
@@ -68,6 +70,46 @@ class RegsiterController extends ControllerBase
 
   public function step2Alter(&$form)
   {
+    // $query = \Drupal::entityQuery('node')
+    //   ->condition("type", "product");
+    // $nids = $query->execute();
+
+
+
+    // $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+
+
+    // //print_r($someArray);
+
+    // $products = [];
+
+    // foreach ($nodes as $node) {
+    //   $api = $node->field_product_api_nids->getValue();
+    //   $apiIDs = array_map(function ($e) {
+    //     return $e['value'];
+    //   }, $api);
+    //   $apiNodes = \Drupal\node\Entity\Node::loadMultiple($apiIDs);
+
+    //   $apiOptions = [];
+    //   foreach ($apiNodes as $apiNode) {
+    //     $apiOptions[$apiNode->id()] = $apiNode->title->value;
+    //   }
+
+    //   $products[$node->id()] = [
+    //     '#type' => 'container',
+    //     '#title' => $node->title->value,
+    //     'checkbox' => [
+    //       '#type' => 'checkbox',
+    //       '#title' => $node->title->value,
+    //     ],
+    //     'apiOptions' => [
+    //       '#type' => 'checkboxes',
+    //       '#options' => $apiOptions
+    //     ],
+    //   ];
+    // }
+    // $form['products'] = $products;
+    // return;
     foreach ($form['#fieldgroups']['group_products_to_make_your_life']->children as $cid) {
       //by reference
       $child = $form[$cid];
